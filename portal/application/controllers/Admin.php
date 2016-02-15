@@ -1,5 +1,7 @@
 <?php
 
+//This is a test for my git workflow
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
