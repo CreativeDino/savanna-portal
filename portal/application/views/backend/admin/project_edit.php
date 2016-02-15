@@ -85,6 +85,9 @@
                          </div>
                         </div>
                     </div>
+                    <!-- //EBJ Commenting out. Not using demo url feature -->
+    <!--
+
     
                     <div class="form-group">
                         <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('demo_url');?></label>
@@ -96,7 +99,7 @@
                          </div>
                         </div>
                     </div>
-    
+    -->
                     <div class="form-group">
                         <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('progress_status');?></label>
                         
@@ -142,7 +145,11 @@
                             </select>
                         </div>
                     </div>
-    
+                    
+                    
+    <!-- //EBJ Commenting out. Not using staff feature -->
+    <!--
+
                     <div class="form-group">
                         <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('assign_staff');?></label>
                         
@@ -160,6 +167,7 @@
                         </select>
                         </div>
                     </div>
+                    -->
                     
                   <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-8">
@@ -271,6 +279,9 @@
     </div>
 
     <!-- staff -->
+    <!-- //EBJ Commenting out. Not using staff feature -->
+    <!--
+
     <?php 
         $staffs = ( explode(',', $row['staffs']));
         $number_of_staffs = count($staffs) - 1;
@@ -378,6 +389,7 @@
         </div>
 
 </div>
+-->
 <?php endforeach;?>
 
 

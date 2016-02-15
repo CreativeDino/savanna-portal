@@ -5,7 +5,7 @@
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    <?php echo get_phrase('add_project_milestone'); ?>
+                    <?php echo get_phrase('add_new_invoice'); ?>
                 </div>
             </div>
             <div class="panel-body">
@@ -60,7 +60,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-7">
-                        <button type="submit" class="btn btn-info" id="submit-button"><?php echo get_phrase('add_milestone'); ?></button>
+                        <button type="submit" class="btn btn-info" id="submit-button"><?php echo get_phrase('create_invoice'); ?></button>
                         <span id="preloader-form"></span>
                     </div>
                 </div>

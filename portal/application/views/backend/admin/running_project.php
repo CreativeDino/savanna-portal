@@ -25,7 +25,8 @@
            		<?php echo $counter++;?>
            	</td>
 			<td>
-				<a href="<?php echo base_url();?>index.php?admin/projectroom/wall/<?php echo $row['project_code'];?>">
+				<!-- //EBJ changed defult link to overview instead of wall --->
+				<a href="<?php echo base_url();?>index.php?admin/projectroom/overview/<?php echo $row['project_code'];?>">
 					<?php echo $row['title'];?>
                </a>
            </td>

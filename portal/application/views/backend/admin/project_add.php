@@ -3,8 +3,10 @@
         <div class="panel panel-primary" data-collapsed="0">
             <div class="panel-heading">
                 <div class="panel-title" >
-                    <i class="entypo-plus-circled"></i>
-                    <?php echo get_phrase('project_form'); ?>
+	                <!-- //EBJ commenting out.  unnessisary icon -->
+                    <!-- <i class="entypo-plus-circled"></i> -->
+                    <!-- //EBJ changeing from project_form to new_project_form -->
+                    <?php echo get_phrase('new_project_form'); ?>
                 </div>
             </div>
             <div class="panel-body">
@@ -61,7 +63,9 @@
                         </div>
                     </div>
                 </div>
-
+                
+				<!-- //EBJ commenting out.  not using demo url feature -->
+				<!--
                 <div class="form-group">
                     <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('demo_url'); ?></label>
 
@@ -72,6 +76,8 @@
                         </div>
                     </div>
                 </div>
+                -->
+
 
                 <div class="form-group">
                     <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('progress_status'); ?></label>
@@ -87,7 +93,7 @@
                     <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('client'); ?></label>
 
                     <div class="col-sm-5">
-                        <select name="client_id" class="select2">
+                        <select name="client_id" class="form-control selectboxit">
                             <option><?php echo get_phrase('select_a_client'); ?></option>
                             <?php
                             $clients = $this->db->get('client')->result_array();
@@ -116,7 +122,10 @@
                         </select>
                     </div>
                 </div>
-
+                
+				
+				<!-- //EBJ commenting out.  not using staff feature -->
+				<!-- 
                 <div class="form-group">
                     <label for="field-1" class="col-sm-3 control-label"><?php echo get_phrase('assign_staff'); ?></label>
 
@@ -132,6 +141,7 @@
                         </select>
                     </div>
                 </div>
+                -->
 
                 <div class="form-group">
                     <label for="field-1" class="col-sm-3 control-label"></label>

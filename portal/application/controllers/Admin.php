@@ -83,7 +83,7 @@ class Admin extends CI_Controller {
             $this->crud_model->delete_client($param2);
 
         $page_data['page_name'] = 'client';
-        $page_data['page_title'] = get_phrase('manage_client');
+        $page_data['page_title'] = get_phrase('manage_clients');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -144,7 +144,7 @@ class Admin extends CI_Controller {
         }
 
         $page_data['page_name']     = 'company';
-        $page_data['page_title']    = get_phrase('company');
+        $page_data['page_title']    = get_phrase('manage_companies');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -294,7 +294,7 @@ class Admin extends CI_Controller {
         }
 
         $page_data['page_name']   = 'project_room'; 
-        $page_data['page_title']  = get_phrase('project_room');
+        $page_data['page_title']  = /* //EBJ changing from project_room to project */get_phrase('project_dashboard');
         $page_data['page_title'] .=  " : " . $this->db->get_where('project',array('project_code'=>$param2))->row()->title;
         $this->load->view('backend/index', $page_data);
     }
@@ -434,12 +434,49 @@ class Admin extends CI_Controller {
         // generate pdf by dompdf
         $data = pdf_create($html, '', false);
         write_file('uploads/invoice.pdf', $data);
-        $invoice_number =   $this->db->get_where('invoice' , array('invoice_id' => $invoice_id))->row()->invoice_number;
-        $client_id      =   $this->db->get_where('invoice' , array('invoice_id' => $invoice_id))->row()->client_id;
+        $invoice_number =   sprintf('%04d',$this->db->get_where('project_milestone' , array('project_milestone_id' => $project_milestone_id))->row()->project_milestone_id);
+        $client_id      =   $this->db->get_where('project_milestone' , array('project_milestone_id' => $project_milestone_id))->row()->client_id;
         $client_email   =   $this->db->get_where('client' , array('client_id' => $client_id))->row()->email;
+        $invoice_timestamp = $this->db->get_where('project_milestone' , array('project_milestone_id' => $project_milestone_id))->row()->timestamp;
+        $invoice_date = date('F dS, Y', $invoice_timestamp);
+        
+        $message = '<html><body>';
+        $message .= $html;
+        $message .= '</body></html>';
+        
+        $subject = "Invoice ID $invoice_number | Services rendered $invoice_date";
+        
+        $from = 'Savanna Landscapes <mark@savannalandscapes.com>';
+        
+        $attachment_url='uploads/invoice.pdf';
+       
+       
+       //var_dump($subject);
         
         // send the invoice to client email
-        $this->email_model->do_email('' , 'invoice #'.$invoice_number , $client_email , NULL , 'uploads/invoice.pdf');
+         $this->email_model->do_email($message, $subject, $client_email, $from, $attachment_url);
+       
+        
+        
+        
+        
+        //$to = 'ericandellenjones@gmail.com';
+        //$subject = 'Invoice from Savanna Landscapes';
+        //$message = '<html><body>';
+        //$message .= $html;
+        //$message .= '</body></html>';
+        //$headers = "From: Savanna Landscapes" . "\r\n";
+		//$headers .= "Reply-To: mark@savannalandscapes.com". "\r\n";
+		//$headers .= "CC: susan@example.com\r\n";
+		//$headers .= "MIME-Version: 1.0\r\n";
+        //$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+		//$milestone_info = $this->db->get_where('project_milestone' , array('project_milestone_id' => $project_milestone_id))->row()->client_id;
+		
+        //var_dump($client_email);
+       
+        //mail($to, $subject, $message, $headers);
+        //echo "success.  email sent to ".$to."\r\n"."<br>********************EMAIL MESSAGE********************<br>"."\r\n".$message;	
     }
 
     // reloads the projectroom payment body
@@ -501,7 +538,7 @@ class Admin extends CI_Controller {
 
 
         $page_data['page_name'] = 'project';
-        $page_data['page_title'] = get_phrase('manage_project');
+        $page_data['page_title'] = get_phrase('manage_projects');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -808,7 +845,7 @@ class Admin extends CI_Controller {
         }
 
         $page_data['page_name']     = 'accounting_expense_category';
-        $page_data['page_title']    = get_phrase('expense_category');
+        $page_data['page_title']    = get_phrase('expense_categories');
         $this->load->view('backend/index', $page_data);
 
     }

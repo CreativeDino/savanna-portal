@@ -25,7 +25,7 @@
            		<?php echo $counter++;?>
            	</td>
 			<td>
-				<a href="<?php echo base_url();?>index.php?client/projectroom/wall/<?php echo $row['project_code'];?>">
+				<a href="<?php echo base_url();?>index.php?client/projectroom/overview/<?php echo $row['project_code'];?>">
 					<?php echo $row['title'];?>
                </a>
            </td>
@@ -54,7 +54,7 @@
            </td>
 			<td>
             	<a class="btn btn-info tooltip-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php echo get_phrase('project_room');?>" 
-            		href="<?php echo base_url();?>index.php?client/projectroom/wall/<?php echo $row['project_code'];?>">
+            		href="<?php echo base_url();?>index.php?client/projectroom/overview/<?php echo $row['project_code'];?>">
                 	<i class="entypo-target"></i>
                 </a>
             	

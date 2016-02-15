@@ -286,7 +286,7 @@ class Crud_model extends CI_Model {
         $data['budget']              = $this->input->post('budget');
         $data['timestamp_start']     = $this->input->post('timestamp_start');
         $data['timestamp_end']       = $this->input->post('timestamp_end');
-        $data['demo_url']            = $this->input->post('demo_url');
+        //$data['demo_url']            = $this->input->post('demo_url');
         $data['progress_status']     = $this->input->post('progress_status');
         $data['client_id']           = $this->input->post('client_id');
         $data['company_id']          = $this->input->post('company_id');
@@ -313,7 +313,7 @@ class Crud_model extends CI_Model {
         $data['budget']              = $this->input->post('budget');
         $data['timestamp_start']     = $this->input->post('timestamp_start');
         $data['timestamp_end']       = $this->input->post('timestamp_end');
-        $data['demo_url']            = $this->input->post('demo_url');
+        //$data['demo_url']            = $this->input->post('demo_url');
         $data['project_status']      = $this->input->post('project_status');
         $data['progress_status']     = $this->input->post('progress_status');
         $data['client_id']           = $this->input->post('client_id');   

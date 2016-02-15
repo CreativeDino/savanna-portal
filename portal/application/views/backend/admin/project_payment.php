@@ -10,7 +10,7 @@
 
 		<div class="panel-heading">
 			<div class="panel-title">
-				<?php echo get_phrase('project_milestones');?>
+				<?php  /* //EBJ changed project_milestones to invoices_monthly_view */ echo get_phrase('invoices_monthly_view');?>
 			</div>
 			
 		</div>
@@ -30,7 +30,7 @@
     
     <a href="#" class="btn btn-info pull-right tooltip-primary"
         onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/project_milestone_add/<?php echo $row['project_code']; ?>');">
-        <i class="entypo-plus"></i> <?php echo get_phrase('add_new_milestone');?>
+        <i class="entypo-plus"></i> <?php /* //EBJ changed add_new_milestone to create_new_invoice */ echo get_phrase('create_new_invoice');?>
     </a>
     <br><br><br>
 
@@ -40,7 +40,7 @@
 
         <div class="panel-heading">
             <div class="panel-title">
-                <?php echo get_phrase('payment_milestones');?>
+                <?php echo /* //EBJ changed payment_milestones to invoice_list */ get_phrase('invoice_list');?>
             </div>
             
         </div>
@@ -235,6 +235,8 @@
     </div>
 
     <!-- staff -->
+    <!-- //EBJ Commenting out. Not using staff feature -->
+    <!--
     <?php 
         $staffs = ( explode(',', $row['staffs']));
         $number_of_staffs = count($staffs) - 1;
@@ -342,7 +344,7 @@
         </div>
 
 </div>
-
+-->
 
 <!-- custom styling for project calendar -->
 <style>

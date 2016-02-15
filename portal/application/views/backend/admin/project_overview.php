@@ -26,8 +26,11 @@
                 <?php echo $row['timestamp_start'];?>  <b>to</b>  <?php echo $row['timestamp_end'];?>
                 &nbsp;
                 &nbsp;
+                <!-- //EBJ comenting out.  not using url feature -->
+                <!--
                 <i class="entypo-globe" style="color: #ccc;"></i>
                 <a href="<?php echo $row['demo_url'];?>" target="_blank"><?php echo $row['demo_url'];?></a>
+                -->
                 <?php if ($row['company_id'] > 0):?>
                 &nbsp;
                 &nbsp;
@@ -160,6 +163,9 @@
     </div>
 
     <!-- staff -->
+    <!-- //EBJ Commenting out. Not using staff feature -->
+    <!--
+
     <?php 
         $staffs = ( explode(',', $row['staffs']));
         $number_of_staffs = count($staffs) - 1;
@@ -267,4 +273,5 @@
         </div>
 
 </div>
+-->
 <?php endforeach;?>

@@ -56,7 +56,9 @@ foreach ($milestone_details as $row):
     <div class="panel-body">
         
         <table class="table table-bordered">
-        <tr>
+
+<!-- //EBJ comenting out to disable paypal -->	        
+<!--        <tr>
             <td align="left">
                 <img style="width: 20%;" src="<?php echo base_url();?>assets/images/paypal.png">
             </td>
@@ -65,7 +67,7 @@ foreach ($milestone_details as $row):
                     <?php echo get_phrase('pay_with');?> PayPal
                 </a>
             </td>
-        </tr>
+        </tr> -->
         <tr>
             <td align="left">
                 <img style="width: 15%;" src="<?php echo base_url();?>assets/images/stripe.png">

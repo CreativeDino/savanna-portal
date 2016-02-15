@@ -24,6 +24,8 @@
 			<i class="entypo-info"></i>
 		</a>
 		
+		<!-- //EBJ Commenting out, unused feature -->
+		<!--
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?client/projectroom/wall/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_wall') 
 								echo 'btn btn-primary';
@@ -32,6 +34,7 @@
 			<?php echo get_phrase('wall');?>
 			<i class="entypo-chat"></i>
 		</a>
+		-->
 
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?client/projectroom/file/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_file') 
@@ -42,6 +45,8 @@
 			<i class="entypo-attach"></i>
 		</a>
 
+<!-- //EBJ commenting out, unused feature -->
+<!--
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?client/projectroom/timesheet/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_timesheet') 
 								echo 'btn btn-primary';
@@ -50,13 +55,13 @@
 			<?php echo get_phrase('timesheet');?>
 			<i class="entypo-clock"></i>
 		</a>
-
+-->
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?client/projectroom/payment/<?php echo $project_code;?>" 
-			class="<?php if ($room_page == 'project_payment') 
+			class="<?php if ($room_page == 'invoices') 
 								echo 'btn btn-primary';
 							else 
 								echo 'btn btn-default';?> btn-block btn-icon icon-left">
-			<?php echo get_phrase('payment');?>
+			<?php echo get_phrase('invoices');?>
 			<i class="entypo-credit-card"></i>
 		</a>
 

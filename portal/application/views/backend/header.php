@@ -241,7 +241,8 @@
                 data-placement="top" style="padding: 0px;">
                 <a href="#" class="dropdown-toggle" data-collapse-sidebar="1"  data-toggle="chat" 
                    style="display:block;" >
-                    <i class="entypo-menu" style="color: #ccc;"></i>
+	                   <!-- //EBJ changed icon to list -->
+                    <i class="entypo-list" style="color: #ccc;"></i>
                     <span id="incomplete_todo_number">
                         <?php $this->crud_model->get_incomplete_todo();?>
                     </span>

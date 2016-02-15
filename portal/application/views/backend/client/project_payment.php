@@ -14,7 +14,7 @@
 
         <div class="panel-heading">
             <div class="panel-title">
-                <?php echo get_phrase('payment_milestones');?>
+                <?php echo get_phrase('invoices_list');?>
             </div>
             
         </div>
@@ -92,7 +92,7 @@
 
         <div class="panel-heading">
             <div class="panel-title">
-                <?php echo get_phrase('project_milestones');?>
+                <?php echo get_phrase('invoices_monthly_view');?>
             </div>
             
         </div>

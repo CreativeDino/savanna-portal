@@ -66,7 +66,7 @@ foreach ($milestone_details as $row):
             <strong><?php echo get_phrase('project_name');?></strong> :
             <?php echo $this->db->get_where('project' , array('project_code' =>$row['project_code']))->row()->title;?>
         </div>
-        <h4><?php echo get_phrase('milestone'); ?></h4>
+        <h4><?php echo get_phrase('invoice_details'); ?></h4>
         <table class="table table-bordered" width="100%" border="1" style="border-collapse:collapse;">
             <thead>
                 <tr>
@@ -90,6 +90,25 @@ foreach ($milestone_details as $row):
                 </tr>
             </tbody>
         </table>
+        
+         <table class="table table-bordered" width="100%" border="1" style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th><?php echo get_phrase('notes'); ?></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <?php echo $row['note'];?>
+                    </td>
+				</tr>
+            </tbody>
+        </table>
+        
+        
+        
         <table width="100%" border="0">    
             
             <tr>

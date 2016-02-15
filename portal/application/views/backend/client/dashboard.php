@@ -26,18 +26,23 @@
 	        		<?php echo get_phrase('payment_history');?>
 	        			<i class="entypo-credit-card"></i>
 	        </a>
-    
+    <!-- //EBJ commenting out, unneeded feature -->
+    <!--
 	        <a type="button" class="btn btn-default btn-icon icon-left col-md-5 col-xs-12"  style="margin:5px;"
 				href="<?php echo base_url();?>index.php?client/project_quote">
 	        		<?php echo get_phrase('submit_project_quote');?>
 	        			<i class="entypo-plus"></i>
 	        </a>
+	        -->
     
+    <!-- //EBJ commenting out, unneeded feature -->
+    <!--
 	        <a type="button" class="btn btn-default btn-icon icon-left col-md-5 col-xs-12"  style="margin:5px;"
 				href="<?php echo base_url();?>index.php?client/support_ticket_create">
 	        		<?php echo get_phrase('submit_support_ticket');?>
 	        			<i class="entypo-lifebuoy"></i>
 	        </a>
+	        -->
     
     
 	</div>

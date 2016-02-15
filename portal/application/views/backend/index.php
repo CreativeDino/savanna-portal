@@ -36,7 +36,10 @@
                 <?php include 'header.php'; ?>
 
                 <h3 style="margin:20px 0px; color:#818da1; font-weight:200;">
-                    <i class="entypo-right-circled"></i> 
+                    <!-- //EBJ Commenting out icon --distracting -->
+                    <!-- 
+                    <i class="entypo-right-circled"></i>
+                    -->
                     <?php echo $page_title; ?>
                 </h3>
 

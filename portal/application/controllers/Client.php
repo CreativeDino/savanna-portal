@@ -53,7 +53,7 @@ class Client extends CI_Controller {
         }
 
         $page_data['page_name'] = 'project';
-        $page_data['page_title'] = get_phrase('manage_project');
+        $page_data['page_title'] = get_phrase('manage_projects');
         $this->load->view('backend/index', $page_data);
     }
 
@@ -117,7 +117,7 @@ class Client extends CI_Controller {
         }
 
         $page_data['page_name']   = 'project_room'; 
-        $page_data['page_title']  = get_phrase('project_room');
+        $page_data['page_title']  = get_phrase('project_dashboard');
         $page_data['page_title'] .=  " : " . $this->db->get_where('project',array('project_code'=>$param2))->row()->title;
         $this->load->view('backend/index', $page_data);
     }

@@ -72,6 +72,8 @@
 
         <!-- MANAGE PROJECTS -->
 
+
+
         <li class="<?php if ($page_name == 'project' ||
                                 $page_name == 'project_room' ||
                                     $page_name == 'project_quote' ||
@@ -79,7 +81,7 @@
                                         echo 'opened active has-sub';?>">
             <a href="#">
                 <i class="entypo-paper-plane"></i>
-                <span><?php echo get_phrase('project'); ?></span>
+                <span><?php echo get_phrase('projects'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'project') echo 'active';?>">
@@ -88,14 +90,18 @@
                         <span><?php echo get_phrase('project_list'); ?></span>
                     </a>
                 </li>
+                <!-- //EBJ comenting out , not using feature -->
+                <!--
                 <li class="<?php if ($page_name == 'project_quote') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?client/project_quote">
                         <i class="entypo-dot"></i>
                         <span><?php echo get_phrase('project_quote'); ?></span>
                     </a>
                 </li>
+                -->
             </ul>
         </li>
+        
 
         <!-- PAYMENT HISTORY -->
 
@@ -111,7 +117,7 @@
         <li class="<?php if ($page_name == 'note') echo 'active';?>">
             <a href="<?php echo base_url(); ?>index.php?client/note">
                 <i class="entypo-doc-text"></i>
-                <span><?php echo get_phrase('note'); ?></span>
+                <span><?php echo get_phrase('notes'); ?></span>
             </a>
         </li>
 
@@ -120,11 +126,13 @@
         <li class="<?php if ($page_name == 'message') echo 'active';?>">
             <a href="<?php echo base_url(); ?>index.php?client/message">
                 <i class="entypo-mail"></i>
-                <span><?php echo get_phrase('message'); ?></span>
+                <span><?php echo get_phrase('messages'); ?></span>
             </a>
         </li>
 
         <!-- SUPPORT TICKET -->
+        <!-- //EBJ commenting out, unused feature -->
+        <!--
 
         <li class="<?php if ($page_name == 'support_ticket_create' ||
                                 $page_name == 'support_ticket' ||
@@ -150,6 +158,7 @@
             </ul>
         </li>
 
+-->
         <!-- ACCOUNT -->
 
         <li class="<?php if ($page_name == 'manage_profile') echo 'active';?>">

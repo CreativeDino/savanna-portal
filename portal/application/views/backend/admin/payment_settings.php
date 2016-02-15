@@ -30,7 +30,8 @@
                         </select>
                     </div>
                 </div>
-
+<!-- //EBJ Comenting out to disable paypal -->                
+<!--
                 <hr />
 
                 <center>
@@ -45,7 +46,7 @@
                               value="<?php echo $this->db->get_where('settings' , array('type' =>'paypal_email'))->row()->description;?>">
                       </div>
                   </div>
-
+-->
                   <hr />
 
                     <center>

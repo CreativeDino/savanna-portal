@@ -247,6 +247,9 @@
     </div>
 
     <!-- staff -->
+    <!-- //EBJ Commenting out. Not using staff feature -->
+    <!--
+
     <?php 
         $staffs = ( explode(',', $row['staffs']));
         $number_of_staffs = count($staffs) - 1;
@@ -354,7 +357,7 @@
         </div>
 
 </div>
-
+-->
 
 
 <script type="text/javascript">

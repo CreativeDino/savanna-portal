@@ -48,7 +48,7 @@
 				0
 			</div>
 			
-			<h3 style="font-weight:200; font-size: 15px;"><?php echo get_phrase('total_client_payment');?></h3>
+			<h3 style="font-weight:200; font-size: 15px;"><?php echo get_phrase('total_client_payments');?></h3>
 		</div>
 		
 	</div>

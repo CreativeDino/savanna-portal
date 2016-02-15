@@ -87,7 +87,8 @@
                                         echo 'opened active has-sub';?>">
             <a href="#">
                 <i class="entypo-trophy"></i>
-                <span><?php echo get_phrase('client'); ?></span>
+                <! //EBJ changed client to clients -->
+                <span><?php echo get_phrase('clients'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'client' ||
@@ -107,7 +108,13 @@
             </ul>
         </li>
 
+
+
         <!-- MANAGE TEAM MEMBERS -->
+
+<!-- //EBJ comenting out. not using team feature. -->
+<!--
+
         <li class="<?php if ($page_name == 'staff' ||
                                 $page_name == 'account_role' ||
                                     $page_name == 'admins')
@@ -137,6 +144,7 @@
                 </li>
             </ul>
         </li>
+        -->
 
         <!-- MANAGE CLIENT PROJECTS -->
 
@@ -147,7 +155,8 @@
                                             echo 'opened active has-sub';?>">
             <a href="#">
                 <i class="entypo-paper-plane"></i>
-                <span><?php echo get_phrase('client_project'); ?></span>
+                <!-- //EBJ changed project to projects -->
+                <span><?php echo get_phrase('client_projects'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'project') echo 'active';?>">
@@ -162,16 +171,23 @@
                         <span><?php echo get_phrase('create_project'); ?></span>
                     </a>
                 </li>
+                
+                <!-- //EBJ comenting out.  Not using the quote feature -->
+                <!--
                 <li class="<?php if ($page_name == 'project_quote') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/project_quote">
                         <i class="entypo-dot"></i>
                         <span><?php echo get_phrase('project_quote'); ?></span>
                     </a>
                 </li>
+                -->
             </ul>
         </li>
 
         <!-- TEAM TASKS -->
+        
+<!-- //EBJ comenting out. not using team feature. -->
+<!--
         <li class="<?php if ($page_name == 'team_task' ||
                                 $page_name == 'team_task_archived' ||
                                     $page_name == 'team_task_view')
@@ -195,7 +211,7 @@
                 </li>
             </ul>
         </li>
-
+-->
         <!-- CALENDAR -->
 
         <li class="<?php if ($page_name == 'calendar') echo 'active';?>">
@@ -209,7 +225,8 @@
         <li class="<?php if ($page_name == 'message') echo 'active';?>">
             <a href="<?php echo base_url(); ?>index.php?admin/message">
                 <i class="entypo-mail"></i>
-                <span><?php echo get_phrase('message'); ?></span>
+                <!-- //EBJ changed message to messages -->
+                <span><?php echo get_phrase('messages'); ?></span>
             </a>
         </li>
 
@@ -218,7 +235,8 @@
         <li class="<?php if ($page_name == 'note') echo 'active';?>">
             <a href="<?php echo base_url(); ?>index.php?admin/note">
                 <i class="entypo-doc-text"></i>
-                <span><?php echo get_phrase('note'); ?></span>
+                <!-- //EBJ changed note to notes -->
+                <span><?php echo get_phrase('notes'); ?></span>
             </a>
         </li>
 
@@ -236,10 +254,12 @@
                 <li class="<?php if ($page_name == 'accounting_client_payment') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/accounting_client_payment">
                         <i class="entypo-dot"></i>
-                        <span><?php echo get_phrase('client_payment'); ?></span>
+                        <!-- //EBJ changed payment to payments" -->
+                        <span><?php echo get_phrase('client_payments'); ?></span>
                     </a>
                 </li>
-                <li class="<?php if ($page_name == 'accounting_expense') echo 'active';?>">
+                <!-- //EBJ changed expense to expenses -->
+                <li class="<?php if ($page_name == 'accounting_expenses') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/accounting_expense">
                         <i class="entypo-dot"></i>
                         <span><?php echo get_phrase('expense_management'); ?></span>
@@ -248,7 +268,8 @@
                 <li class="<?php if ($page_name == 'accounting_expense_category') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/accounting_expense_category">
                         <i class="entypo-dot"></i>
-                        <span><?php echo get_phrase('expense_category'); ?></span>
+                        <!-- //EBJ changed expense category to categories -->
+                        <span><?php echo get_phrase('expense_categories'); ?></span>
                     </a>
                 </li>
             </ul>
@@ -259,25 +280,29 @@
         <li class="<?php if ($page_name == 'report')echo 'opened active has-sub';?>">
             <a href="<?php echo base_url(); ?>index.php?">
                 <i class="entypo-chart-area"></i>
-                <span><?php echo get_phrase('report'); ?></span>
+                <!-- //EBJ changed report to reports -->
+                <span><?php echo get_phrase('reports'); ?></span>
             </a>
             <ul>
                 <li class="<?php if (isset($report_type) && $report_type == 'project') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/report/project">
                         <i class="entypo-dot"></i>
-                        <span><?php echo get_phrase('project_report'); ?></span>
+                        <!-- //EBJ changed report to reports -->
+                        <span><?php echo get_phrase('project_reports'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if (isset($report_type) && $report_type == 'client') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/report/client">
                         <i class="entypo-dot"></i>
-                        <span><?php echo get_phrase('client_report'); ?></span>
+                        <!-- //EBJ changed report to reports -->
+                        <span><?php echo get_phrase('client_reports'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if (isset($report_type) && $report_type == 'expense') echo 'active';?>">
                     <a href="<?php echo base_url(); ?>index.php?admin/report/expense">
                         <i class="entypo-dot"></i>
-                        <span><?php echo get_phrase('expense_report'); ?></span>
+                        <!-- //EBJ changed report to reports -->
+                        <span><?php echo get_phrase('expense_reports'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if (isset($report_type) && $report_type == 'income_expense') echo 'active';?>">
@@ -290,6 +315,9 @@
         </li>
 
         <!-- SUPPORT TICKET -->
+        
+<!-- //EBJ comenting out. not using support feature. -->
+<!--
 
         <li class="<?php if ($page_name == 'support_ticket_create' ||
                                 $page_name == 'support_ticket' ||
@@ -314,6 +342,7 @@
                 </li>
             </ul>
         </li>
+        -->
 
         <!-- SETTINGS -->
 

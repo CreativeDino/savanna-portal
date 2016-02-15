@@ -24,6 +24,9 @@
 			<i class="entypo-info"></i>
 		</a>
 		
+<!-- //EBJ Commenting out wall section --unnessisary feature -->
+<!--
+		
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?admin/projectroom/wall/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_wall') 
 								echo 'btn btn-primary';
@@ -32,6 +35,7 @@
 			<?php echo get_phrase('wall');?>
 			<i class="entypo-chat"></i>
 		</a>
+-->
 
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?admin/projectroom/file/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_file') 
@@ -41,7 +45,9 @@
 			<?php echo get_phrase('files');?>
 			<i class="entypo-attach"></i>
 		</a>
-
+		
+		<!-- //EBJ commenting out.  not using tasks feature -->
+		<!--
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?admin/projectroom/task/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_task') 
 								echo 'btn btn-primary';
@@ -50,7 +56,10 @@
 			<?php echo get_phrase('tasks');?>
 			<i class="entypo-flow-tree"></i>
 		</a>
+		-->
 
+		<!-- //EBJ commenting out.  not using timesheet feature -->
+		<!--
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?admin/projectroom/timesheet/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_timesheet') 
 								echo 'btn btn-primary';
@@ -59,13 +68,14 @@
 			<?php echo get_phrase('timesheet');?>
 			<i class="entypo-clock"></i>
 		</a>
+		-->
 
 		<a style="text-align: left;" href="<?php echo base_url();?>index.php?admin/projectroom/payment/<?php echo $project_code;?>" 
 			class="<?php if ($room_page == 'project_payment') 
 								echo 'btn btn-primary';
 							else 
 								echo 'btn btn-default';?> btn-block btn-icon icon-left">
-			<?php echo get_phrase('payment');?>
+			<?php echo /* //EBJ changing from payment to invoices */get_phrase('invoices');?>
 			<i class="entypo-credit-card"></i>
 		</a>
 
@@ -74,7 +84,8 @@
 								echo 'btn btn-primary';
 							else 
 								echo 'btn btn-default';?> btn-block btn-icon icon-left">
-			<?php echo get_phrase('note');?>
+									<!-- //EBJ changed note to notes -->
+			<?php echo get_phrase('notes');?>
 			<i class="entypo-doc-text-inv"></i>
 		</a>
 
@@ -84,7 +95,7 @@
 								echo 'btn btn-primary';
 							else 
 								echo 'btn btn-info';?> btn-block btn-icon icon-left">
-			<?php echo get_phrase('edit_this_project');?>
+			<?php echo /* //EBJ changed from edit this project to edit details */get_phrase('edit_details');?>
 			<i class="entypo-pencil"></i>
 		</a>
 

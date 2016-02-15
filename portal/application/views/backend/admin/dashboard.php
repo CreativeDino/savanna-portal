@@ -2,16 +2,22 @@
 <div class="row">
 
 	<div class="col-sm-3">
-		<div class="tile-title tile-cyan">
+		<!--- //EBJ adding link to button -->
+		<a href="<?php echo base_url();?>index.php?admin/client">
+		<div class="tile-title tile-aqua">
 			<div class="icon">
-				<i class="glyphicon glyphicon-thumbs-up" style="font-size:40px;"></i>
+				<i class="entypo-users" style="font-size:40px;"></i>
 			</div>
 			<div class="title">
-				<h3 style="font-weight:200;"><?php echo $this->db->get('client')->num_rows();?> <?php echo get_phrase('total_client');?></h3>
+				<h3 style="font-weight:200;"><?php echo $this->db->get('client')->num_rows();?> <?php echo get_phrase('clients'); ?></h3>
 				<p></p>
 			</div>
 		</div>
 	</div>
+	</a>
+	
+	<!-- //EBJ commenting out.  Not using team functions -->
+	<!--
 	<div class="col-sm-3">
 		<div class="tile-title tile-red">
 			<div class="icon">
@@ -23,6 +29,8 @@
 			</div>
 		</div>
 	</div>
+	-->
+	
 	<div class="col-sm-3">
 		<div class="tile-title tile-blue">
 			<div class="icon">
@@ -30,11 +38,14 @@
 			</div>
 			<div class="title">
 				<h3 style="font-weight:200;"><?php echo $this->db->get_where('project_milestone',array('status'=>0))->num_rows();?> 
-					<?php echo get_phrase('pending_invoice');?></h3>
+					<?php echo get_phrase('invoices');?></h3>
 				<p></p>
 			</div>
 		</div>
 	</div>
+	
+	<!-- //EBJ Commenting out. Not using support tickets feature -->
+	<!--
 	<div class="col-sm-3">
 		<div class="tile-title tile-primary">
 			<div class="icon">
@@ -47,6 +58,39 @@
 			</div>
 		</div>
 	</div>
+	-->
+	
+		<a href="http://savannalandscapes.com" target="new">
+		<div class="col-sm-3">
+		<div class="tile-title tile-cyan">
+			<div class="icon">
+				<i class="entypo-publish" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:200;"> 
+					<?php echo get_phrase('savanna_home');?></h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	</a>
+	
+	
+	<a href="<?php echo base_url();?>index.php?login/logout">
+		<div class="col-sm-3">
+		<div class="tile-title tile-green">
+			<div class="icon">
+				<i class="entypo-block" style="font-size:40px;"></i>
+			</div>
+			<div class="title">
+				<h3 style="font-weight:200;"> 
+					<?php echo get_phrase('logout_now');?></h3>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	</a>
+
 </div>
 
 <div class="row">
@@ -54,19 +98,42 @@
 	<!-- stats-->
 	<div class="col-sm-4">
 	
+	
+	<a href="<?php echo base_url();?>index.php?admin/project/running#tabs-2">	
 		<div class="tile-stats tile-white tile-white-primary" style="padding:30px 20px;">
 			<div class="icon" style="bottom:40px;"><i class="glyphicon glyphicon-send"></i></div>
-			<div class="num" data-start="0" data-end="<?php echo $this->db->get_where('project',array('project_status'=>1))->num_rows();?> "  
+			<?php $running_count=$this->db->get_where('project',array('project_status'=>1))->num_rows(); ?>
+			<div class="num" data-start="<?php if ($running_count < 1){ echo "-0";} else{ echo "0";} ?>" data-end="<?php echo $running_count?> "  
 				data-duration="500" data-delay="0" style="font-weight:200;"></div>
-			<h3 style="font-weight:200;"><?php echo get_phrase('running_project');?></h3>
+			<h3 style="font-weight:200;"><?php echo get_phrase('running_projects');?></h3>
 		</div>
+	</a>
+
+ 		<!-- //EBJ Commenting out team task --unnessisary feature -->
+			<!--
 		<div class="tile-stats tile-white tile-white-primary" style="padding:30px 20px;">
+			
 			<div class="icon" style="bottom:40px;"><i class="glyphicon glyphicon-paperclip"></i></div>
 			<div class="num" data-start="0" data-end="<?php echo $this->db->get_where('team_task',array('task_status'=>1))->num_rows();?>"  
 				data-duration="500" data-delay="0" style="font-weight:200;"></div>
 			<h3 style="font-weight:200;"><?php echo get_phrase('pending_team_task');?></h3>
+		
 		</div>
+	-->
+	
+	<a href="<?php echo base_url();?>index.php?admin/note">
+		<div class="tile-stats tile-white tile-white-primary" style="padding:30px 20px;">
+			<div class="icon" style="bottom:40px;"><i class="glyphicon glyphicon-paperclip"></i></div>
+			<?php $notes_count=$this->db->get_where('note',array('user_id'=>$this->session->userdata('login_user_id')))->num_rows(); ?>
+			<div class="num" data-start="<?php if ($notes_count < 1){ echo "-0";} else{ echo "0";} ?>" data-end="<?php echo $notes_count?> " 
+				data-duration="500" data-delay="0" style="font-weight:200;"></div>
+			<h3 style="font-weight:200;"><?php echo get_phrase('notes');?></h3>
+		</div>
+	</a>
+	
+	
 	</div>
+	
 	<!-- charts-->
 	<script>
 
